@@ -30,7 +30,7 @@ class ControlPage extends Component {
         <Row className="justify-content-center">
           <Col lg={4} className="text-center">
             <Card>
-              <Card.Img src={process.env.PUBLIC_URL + "/fan.jpeg"} className="shadow-lg"/>
+              <Card.Img src={process.env.PUBLIC_URL + "/fan2.jpeg"} className="shadow-lg"/>
               <Card.Body>
                 <Card.Title className="temperature">Control Fan</Card.Title>
                 <Card.Text className="p-4">
@@ -50,11 +50,11 @@ class ControlPage extends Component {
           </Col>
           <Col lg={4} className="text-center">
             <Card>
-              <Card.Img src={process.env.PUBLIC_URL + "/led.jpeg"} className="shadow-lg" />
+              <Card.Img src={process.env.PUBLIC_URL + "/led2.jpeg"} className="shadow-lg" />
               <Card.Body>
                 <Card.Title className="food">Control Led</Card.Title>
                 <Card.Text className="p-4">
-                  <span>Playing with your cat? Just turn the led on<br /></span>
+                  <span>Just turn the led on<br /></span>
                   <span>Remember to turn off if you don't use</span>
                 </Card.Text>
                 <Button className={led ? "text-white control-on" : "text-white control-off"}
@@ -70,11 +70,11 @@ class ControlPage extends Component {
           </Col>
           <Col lg={4} className="text-center">
             <Card>
-              <Card.Img src={process.env.PUBLIC_URL + "/pump.jpeg"} className="shadow-lg" />
+              <Card.Img src={process.env.PUBLIC_URL + "/pump2.jpeg"} className="shadow-lg" />
               <Card.Body>
                 <Card.Title className="water">Control Pump</Card.Title>
                 <Card.Text className="p-4">
-                  <span>Don't forget to get your cat some water<br /></span>
+                  <span>Don't forget to get some water<br /></span>
                   <span>Don't waste too much water by turning off</span>
                 </Card.Text>
                 <Button className={pump ? "text-white control-on" : "text-white control-off"}
