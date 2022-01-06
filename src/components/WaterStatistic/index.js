@@ -50,7 +50,11 @@ class WaterStatistic extends Component {
   componentDidMount() {
     this.props.firebase.data_in(this.props.espid).limitToLast(20).on('value', snapshot => {
       const data = snapshot.val();
-      const data_list = Object.keys(data).map(key => ({water: data[key].water, receive_time: key}));
+      //const data_list = Object.keys(data).map(key => ({water: data[key].water, receive_time: key}));
+      const data_list = [{
+        water: 10,
+        receive_time: "",
+      }]
       this.setState({data: data_list});
     })
   }

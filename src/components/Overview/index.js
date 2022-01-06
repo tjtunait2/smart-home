@@ -18,10 +18,10 @@ class Overview extends Component {
     return(
       <Container>
         <Row className="justify-content-left p-4">
-          <Col lg={4} className="text-center">
+          <Col lg={6} className="text-center">
             <Card>
               {temperature > 30 ?
-                <Card.Img src={process.env.PUBLIC_URL + "/thesun.png"} className="shadow-lg"/> :
+                <Card.Img src={process.env.PUBLIC_URL + "/cloud.jpeg"} className="shadow-lg"/> :
                 <Card.Img src={process.env.PUBLIC_URL + "/cloud.jpeg"} className="shadow-lg"/>}
               <Card.Body>
                 <Card.Title className="temperature">Temperature</Card.Title>
@@ -32,20 +32,20 @@ class Overview extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={4} className="text-center">
+          <Col lg={6} className="text-center">
             <Card>
-              {water ? <Card.Img src={process.env.PUBLIC_URL + "/water.png"} className="shadow-lg"/> :
+              {water ? <Card.Img src={process.env.PUBLIC_URL + "/thirsty.jpeg"} className="shadow-lg"/> :
               <Card.Img src={process.env.PUBLIC_URL + "/thirsty.jpeg"} className="shadow-lg"/>}
               <Card.Body>
                 <Card.Title className="water">Water</Card.Title>
                 <Card.Text className="p-4">
-                  <span>This is the amount of water<br/></span>
+                  <span>This is the amount of water (l) <br/></span>
                   <span className={water ? "cold": "hot"}>{water}</span>
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={4} className="text-center">
+          {/* <Col lg={4} className="text-center">
             <Card>
               {food ? <Card.Img src={process.env.PUBLIC_URL + "/full.png"} className="shadow-lg"/> :
               <Card.Img src={process.env.PUBLIC_URL + "/hungry.png"} className="shadow-lg"/>}
@@ -57,7 +57,7 @@ class Overview extends Component {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     );
@@ -65,7 +65,11 @@ class Overview extends Component {
 
   componentDidMount() {
     this.props.firebase.data_in(this.props.espid).limitToLast(1).on('value', snapshot => {
-      const data = snapshot.val();
+      //const data = snapshot.val();
+      const data = [{
+        temperature: 10,
+        water: 10
+      }]
       const key = Object.keys(data)[0];
       this.setState({uid: key, ...data[key]});
     })

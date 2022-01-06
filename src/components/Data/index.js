@@ -47,7 +47,11 @@ class DataPage extends Component {
 
     this.props.firebase.data_in(this.props.espid).limitToLast(10).on('value', snapshot => {
       const data = snapshot.val();
-      const data_list = Object.keys(data).map(key => ({ ...data[key], uid: key}));
+      // const data_list = Object.keys(data).map(key => ({ ...data[key], uid: key}));
+      const data_list = [{
+        temperature: 10,
+        receive_time: "",
+      }]
       this.setState({data_in: data_list});
     })
   }

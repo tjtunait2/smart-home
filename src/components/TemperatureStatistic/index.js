@@ -46,7 +46,11 @@ class TemperatureStatistic extends Component {
   componentDidMount() {
     this.props.firebase.data_in(this.props.espid).limitToLast(20).on('value', snapshot => {
       const data = snapshot.val();
-      const data_list = Object.keys(data).map(key => ({temperature: data[key].temperature, receive_time: key}));
+      //const data_list = Object.keys(data).map(key => ({temperature: data[key].temperature, receive_time: key}));
+      const data_list = [{
+        temperature: 10,
+        receive_time: "",
+      }]
       this.setState({data: data_list});
     })
   }

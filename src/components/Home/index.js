@@ -80,10 +80,10 @@ class HomePage extends Component {
                     <h2 className="water">Water</h2>
                     {house && <WaterStatistic espid={house}/>}
                   </Carousel.Item>
-                  <Carousel.Item>
+                  {/* <Carousel.Item>
                     <h2 className="food">Food</h2>
                     {house && <FoodStatistic espid={house}/>}
-                  </Carousel.Item>
+                  </Carousel.Item> */}
                 </Carousel>
               </Tab.Pane>
           </Tab.Content>
