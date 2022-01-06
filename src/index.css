@@ -1,0 +1,180 @@
+:root {
+
+    --embers-1:#41436A;
+    --embers-2:#984063;
+    --embers-3:#F64668;
+    --embers-4:#FE9677;
+    --embers-5:#39ABB8;
+    --embers-6:#3CA369;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--embers-3);
+}
+
+h1 {
+    font-size: 26px;
+    color: var(--embers-1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+}
+
+footer {
+  font-size: 14px;
+}
+
+hr {
+  margin:0px 0px 16px 0px;
+}
+
+thead {
+  font-size: 18px;
+}
+
+.navbar-brand{
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.nav-link, .navbar-brand {
+    color: var(--embers-1);
+    text-align: center;
+    /*font-weight: bolder;*/
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.alert {
+    color: var(--embers-3);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.nav-tabs {
+  border: none;
+}
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: var(--embers-4);
+  border-color: transparent transparent #000000;
+  border-bottom: 2px solid !important;
+  margin: 0px;
+}
+
+.nav-link:hover {
+  color: var(--embers-4);
+}
+
+.gradient-1 {
+    background: linear-gradient(to right, #FE9677 0%, #fcc63d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+}
+
+.gradient-2 {
+    background: linear-gradient(to right, #2a3387 0%, #2a6a87 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+}
+
+.gradient-3 {
+    background: linear-gradient(to right, #a33c65 0%, #ad1d44 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+}
+
+.hot {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #e8875a 0%, #e3a864 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 64px;
+}
+
+.cold {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #30CFD0 0%, #476fb5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 64px;
+}
+
+.temperature {
+  background: linear-gradient(to right, #c23434 0%, #3250a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+}
+
+.water {
+  background: linear-gradient(to right, #3bc4b9 0%, #3b52c4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+}
+
+.food {
+  background: linear-gradient(to right, #b6c43b 0%, #3bc492 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+}
+
+.control-on {
+  background: linear-gradient(to right, #c44974 0%, #d13653 100%);
+}
+
+.control-off {
+  background: linear-gradient(to right, #42568c 0%, #2b2436 100%);
+}
+
+.button-gradient {
+  background: linear-gradient(to right, #cc3761 0%, #c92251 100%);
+  border: 0px;
+}
+
+
+.carousel-control-prev {
+  right: -80px;
+  width: 80px;
+}
+
+.carousel-control-next {
+  right: -60px;
+  width: 80px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li{
+    background-color: var(--embers-1);
+}
+
+.carousel-indicators .active {
+    background-color: var(--embers-2);
+}
