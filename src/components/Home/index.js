@@ -41,9 +41,9 @@ class HomePage extends Component {
             <Nav.Item>
               <Nav.Link eventKey="first">Overview</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link eventKey="second">Data table</Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
             <Nav.Item>
               <Nav.Link eventKey="third">Control</Nav.Link>
             </Nav.Item>

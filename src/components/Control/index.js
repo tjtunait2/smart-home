@@ -10,7 +10,7 @@ class ControlPage extends Component {
     this.state = {
       fan: 0,
       led: 0,
-      pump: 0,
+      pump: 0
     };
 
     this.onClick = this.onClick.bind(this);

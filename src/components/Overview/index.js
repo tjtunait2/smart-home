@@ -7,7 +7,7 @@ class Overview extends Component {
     super(props);
     this.state = {
       uid: '',
-      food: 0,
+      // food: 0,
       temperature: 0,
       water: 0,
     }
@@ -64,14 +64,13 @@ class Overview extends Component {
   }
 
   componentDidMount() {
-    this.props.firebase.data_in(this.props.espid).limitToLast(1).on('value', snapshot => {
-      //const data = snapshot.val();
-      const data = [{
-        temperature: 10,
-        water: 10
-      }]
-      const key = Object.keys(data)[0];
-      this.setState({uid: key, ...data[key]});
+    this.props.firebase.data_in(this.props.espid).limitToLast(3).on('value', snapshot => {
+      const data = snapshot.val();
+      //const key = Object.keys(data)[0];
+      console.log(this.props.espid);
+      console.log(data);
+      this.setState({temperature: data.temperature, water: data.water, food: data.food});
+      //this.setState({uid: key, ...data[key]});
     })
   }
 
